@@ -6,6 +6,7 @@ object villaGesell {
 	method nombre() = "Villa Gesell"
 	method posicion() = game.at(8,3)
 	method teEncontro(alguien){game.say(alguien,"llegue a la playa")}
+	method estar(alguien){game.say(alguien,"ya estoy en villaGesell")}
 }
 
 object buenosAires {
@@ -13,4 +14,5 @@ object buenosAires {
 	method nombre() = "Buenos Aires"
 	method posicion() = game.at(1,1)
 	method teEncontro(alguien){(pepita.come(alpiste))}
+	method estar(alguien){game.say(alguien,"ya estoy en buenosAires")}
 }

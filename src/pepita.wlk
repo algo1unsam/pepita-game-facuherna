@@ -29,7 +29,19 @@ object pepita {
 			game.say(self,"hola")
 			alguien.DarDeComer(self)
 		}
-}
+	method faltaEnergia(){
+		if(energia<20){
+			game.say(self,"dame de comer primero")
+		}
+		}
+		
+	method yaEstaEnLaCiudad(unaCiudad){
+		if(ciudad==unaCiudad){	
+			unaCiudad.estar(self)
+		}}}	
+	
+		
+
 object roque{
 	var comidaActual=null
 	var property posicion = game.at(3,4)
@@ -43,6 +55,7 @@ object roque{
 		}
 		comidaActual=nuevaComida
 	}
+
 	
 	method DarDeComer(ave){
 		ave.come(comidaActual)
