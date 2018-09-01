@@ -16,11 +16,19 @@ program PepitaGame {
 	game.addVisualIn(manzana, game.at(5,1))
 	game.addVisual(buenosAires)
 	game.addVisual(villaGesell)
-	game.addVisualCharacter(pepita)
+	game.addVisual(pepita)
+	game.addVisualCharacter(roque)
+	
 
 //	TECLADO
 	keyboard.v().onPressDo { pepita.volaHacia(villaGesell) }
 	keyboard.b().onPressDo { pepita.volaHacia(buenosAires) }
+	keyboard.a().onPressDo { 
+		pepita.come(alpiste)
+		game.removeVisual(alpiste)
+	}
+	keyboard.c().onPressDo { pepita.come(manzana)}
+	game.whenCollideDo(roque,{ algo=> algo.teEncontro(roque)})
 		
 //	START
 	game.start()
