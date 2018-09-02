@@ -61,10 +61,11 @@ object roque{
 
 	
 	method DarDeComer(ave){
+		if(comidaActual!=null){
 		ave.come(comidaActual)
 		game.addVisualIn(comidaActual,game.at(1.randomUpTo(9),1.randomUpTo(9)))
 		comidaActual=null
-		
+		}
 	}
 	
 }
