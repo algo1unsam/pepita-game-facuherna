@@ -1,6 +1,7 @@
 import pepita.*
 import ciudades.*
 import comidas.*
+import Roque.*
 import wollok.game.*
 
 program PepitaGame {
