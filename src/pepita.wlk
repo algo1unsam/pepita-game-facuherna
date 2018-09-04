@@ -36,11 +36,7 @@ object pepita {
 		method teEncontro(alguien){
 			alguien.DarDeComer(self)
 		}
-		method gorda(){
-			if(energia>100){
-				return "pepita-gorda-raw.png"
-			}else return self.imagen()
-		}
+	
 }
 	
 		
