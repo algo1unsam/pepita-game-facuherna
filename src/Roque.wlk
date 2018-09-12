@@ -1,25 +1,25 @@
-object roque{
-	var comidaActual=null
-	var property posicion = game.at(3,4)
-	
+object roque {
+
+	var comidaActual = null
+	var property posicion = game.at(3, 4)
+
 	method imagen() = "jugador.png"
-	
-	method levantar(nuevaComida){
+
+	method levantar(nuevaComida) {
 		game.removeVisual(nuevaComida)
-		if(comidaActual!=null){
+		if (comidaActual != null) {
 			game.addVisualIn(comidaActual, posicion.up(1))
 		}
-		comidaActual=nuevaComida
+		comidaActual = nuevaComida
 	}
 
-	
-	method DarDeComer(ave){
-		if(comidaActual!=null){
-		ave.come(comidaActual)
-		game.addVisualIn(comidaActual,game.at(1.randomUpTo(9),1.randomUpTo(9)))
-		comidaActual=null
+	method DarDeComer(ave) {
+		if (comidaActual != null) {
+			ave.come(comidaActual)
+			game.addVisualIn(comidaActual, game.at(1.randomUpTo(9), 1.randomUpTo(9)))
+			comidaActual = null
 		}
 	}
-	
+
 }
 
